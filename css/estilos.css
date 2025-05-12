@@ -17,4 +17,121 @@ header, footer {
     background-color: #f4d3c2;
     padding: 1em;
     margin-bottom: 1em;
+    text-align: center;
+}
+
+/* ✅ REGLA NUEVA 1: Navegación horizontal */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4b2e2e;
+    font-weight: bold;
+}
+
+/* ✅ REGLA NUEVA 2: Estilos para las tarjetas de pasteles */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pastel {
+    background-color: #fff;
+    border: 1px solid #e2b8a3;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.pastel img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ✅ REGLA NUEVA 3: Estilos para formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e2b8a3;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ✅ REGLA NUEVA 4: Botón del formulario */
+button {
+    background-color: #d94f70;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b03b58;
+}
+
+/* ✅ REGLA NUEVA 5: Imagen del local en index */
+main img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* ✅ Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+/* Eliminar viñetas de la lista de navegación */
+nav ul {
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    text-align: center; /* Centra los enlaces */
+}
+
+nav ul li {
+    display: inline; /* Muestra los enlaces de manera horizontal */
+    margin: 0 15px; /* Espacio entre los enlaces */
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #4b2e2e; /* Cambia el color de los enlaces */
+    font-weight: bold; /* Pone los enlaces en negrita */
 }
