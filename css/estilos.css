@@ -13,14 +13,41 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f4d3c2;
-    padding: 1em;
-    margin-bottom: 1em;
+    padding: 10px 0;
+}
+
+.marca {
+    display: flex;
+    flex-direction: column; /* CAMBIO: Logo arriba del título */
+    align-items: center;
+    gap: 5px;
+}
+
+.logo {
+    height: 50px;
+    background-color: #f4d3c2;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #4b2e2e;
     text-align: center;
 }
 
-/* ✅ REGLA NUEVA 1: Navegación horizontal */
+nav {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
 nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -28,32 +55,73 @@ nav a {
     font-weight: bold;
 }
 
-/* ✅ REGLA NUEVA 2: Estilos para las tarjetas de pasteles */
-.productos {
+main img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destacados {
+    text-align: center;
+}
+
+.pasteles, .productos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
 }
 
+.productos {
+    margin-top: 2em; /* NUEVO: Separar del encabezado */
+}
+
+/* sombreado y fondo mejorado para tarjetas de productos */
 .pastel {
-    background-color: #fff;
+    background-color: #fff2e6;
     border: 1px solid #e2b8a3;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 1em;
     width: 250px;
     text-align: center;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* imágenes de productos más consistentes */
 .pastel img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-/* ✅ REGLA NUEVA 3: Estilos para formulario */
+.cta {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #e67373;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 form {
     background-color: #fff;
     padding: 20px;
@@ -63,6 +131,7 @@ form {
     margin: auto;
 }
 
+/* inputs más accesibles */
 input[type="text"],
 input[type="email"],
 select,
@@ -74,7 +143,6 @@ textarea {
     border: 1px solid #ccc;
 }
 
-/* ✅ REGLA NUEVA 4: Botón del formulario */
 button {
     background-color: #d94f70;
     color: white;
@@ -88,27 +156,26 @@ button:hover {
     background-color: #b03b58;
 }
 
-/* ✅ REGLA NUEVA 5: Imagen del local en index */
-main img {
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+footer {
+    background-color: #f4d3c2;
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
 }
 
-/* ✅ Media query para pantallas pequeñas */
+/* diseño responsive para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
         padding: 0 15px;
     }
 
-    .productos {
+    .pasteles, .productos {
         flex-direction: column;
         align-items: center;
     }
 
     nav {
-        display: flex;
         flex-direction: column;
         gap: 10px;
     }
@@ -116,22 +183,4 @@ main img {
     form {
         padding: 15px;
     }
-}
-/* Eliminar viñetas de la lista de navegación */
-nav ul {
-    list-style-type: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
-    text-align: center; /* Centra los enlaces */
-}
-
-nav ul li {
-    display: inline; /* Muestra los enlaces de manera horizontal */
-    margin: 0 15px; /* Espacio entre los enlaces */
-}
-
-nav a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #4b2e2e; /* Cambia el color de los enlaces */
-    font-weight: bold; /* Pone los enlaces en negrita */
 }
